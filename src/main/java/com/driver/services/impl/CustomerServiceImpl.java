@@ -46,7 +46,7 @@ public class CustomerServiceImpl implements CustomerService {
 		Cab cabbooked=new Cab();
 		List<Driver> driverList=driverRepository2.findAll();
 		for(Driver driver: driverList){
-			boolean available=driver.getCab().isAvailable();
+			boolean available=driver.getCab().getAvailable();
 			if(available) {
 				driverbook=driver;
 				cabbooked=driver.getCab();
